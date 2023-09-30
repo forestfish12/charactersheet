@@ -1,23 +1,39 @@
 import logo from './logo.svg';
+import CharacterHeader from './character/Header';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CharacterHeader />
+      {/* <label>
+        <input type='text'/>
+        <br/>Character Name
+      </label>
+      <label>
+        <input type='text'/>
+        <br/>Class & Level
+      </label>
+      <label>
+        <input type='text'/>
+        <br/>Background
+      </label>
+      <label>
+        <input type='text'/>
+        <br/>Player Name
+      </label>
+      <label>
+        <input type='text'/>
+        <br/>Race
+      </label>
+      <label>
+        <input type='text'/>
+        <br/>Alignment
+      </label>
+      <label>
+        <input type='text'/>
+        <br/>Experience Points
+      </label> */}
     </div>
   );
 }
