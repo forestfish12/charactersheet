@@ -1,11 +1,13 @@
 import logo from './logo.svg';
-import CharacterHeader from './character/Header';
+import CharacterHeader from '../character/Header';
+import Attributes from '../character/Attributes';
 import './App.css';
 
 function App() {
   return (
     <div>
       <CharacterHeader />
+      <Attributes />
       {/* <label>
         <input type='text'/>
         <br/>Character Name

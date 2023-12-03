@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 
-const attributeNames = [
-  'Strength',
-  'Dexterity',
-  'Constitution',
-  'Intelligence',
-  'Wisdom',
-  'Charisma'
-]
+const attributeNames = {
+  'Strength': 0,
+  'Dexterity': 0,
+  'Constitution': 0,
+  'Intelligence': 0,
+  'Wisdom': 0,
+  'Charisma': 0
+}
 
-const attributeValues = [ 0, 0, 0, 0, 0, 0 ];
+// const attributeValues = [ 0, 0, 0, 0, 0, 0 ];
 
 const findModifier = attribute => Math.floor(( attribute - 10 ) / 2);
 
@@ -20,18 +20,34 @@ const Attributes = () => {
   // const [int, setInt] = useState(0);
   // const [wis, setWis] = useState(0);
   // const [cha, setCha] = useState(0);
-  const [values, setValues] = useState(attributeValues);
+  const [pairs, setPairs] = useState();
+
+  const attributePairArray = Object.entries(attributeNames)
 
   return (
     <>
-      {attributeNames.map( (item, index) => (
-        <label>
-          {item}: <input type="number" />
-          Modifier: {}
-          <br/>
-        </label>
-
-      ))}
+      {attributePairArray.map( ([attrName, attrValue]) => 
+        (
+          <AtrInput name={attrName} value={attrValue} />
+        )
+      )
+      }
     </>
   )
 }
+
+const AtrInput = ({name , value}) => {
+  const [stateValue, setStateValue] = useState(value)
+
+  const handleChange = ({target}) => {setStateValue(target.value)};
+
+  return (
+  <label>
+    {name}: <input type="number" value={stateValue} onChange={handleChange}/>
+    Modifier: {findModifier(stateValue)}
+    <br/>
+  </label>
+  )
+}
+
+export default Attributes;
