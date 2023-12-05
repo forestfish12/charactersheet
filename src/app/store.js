@@ -2,7 +2,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import spellBookReducer from "../features/spellBook/spellBookSlice";
 
 const store = configureStore({
-  reducers: {
+  reducer: {
     spellBook: spellBookReducer,
   }
 })
+
+export default store;

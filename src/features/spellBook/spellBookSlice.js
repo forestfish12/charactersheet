@@ -8,7 +8,7 @@ const spellBookSlice = createSlice({
       state.push(action.payload);
     },
     removeSpell: (state, action) => {
-      state = state.filter(spell => spell.id !== action.payload.id);
+      return state.filter(spell => spell.id !== action.payload.id);
     }
   },
 })

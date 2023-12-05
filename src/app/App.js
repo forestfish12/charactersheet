@@ -1,41 +1,12 @@
-import logo from './logo.svg';
-import CharacterHeader from '../character/Header';
-import Attributes from '../character/Attributes';
 import './App.css';
+import SpellBook from '../features/spellBook/SpellBook';
+import SpellBookForm from '../features/spellBook/SpellBookForm';
 
 function App() {
   return (
     <div>
-      <CharacterHeader />
-      <Attributes />
-      {/* <label>
-        <input type='text'/>
-        <br/>Character Name
-      </label>
-      <label>
-        <input type='text'/>
-        <br/>Class & Level
-      </label>
-      <label>
-        <input type='text'/>
-        <br/>Background
-      </label>
-      <label>
-        <input type='text'/>
-        <br/>Player Name
-      </label>
-      <label>
-        <input type='text'/>
-        <br/>Race
-      </label>
-      <label>
-        <input type='text'/>
-        <br/>Alignment
-      </label>
-      <label>
-        <input type='text'/>
-        <br/>Experience Points
-      </label> */}
+      <SpellBook />
+      <SpellBookForm />
     </div>
   );
 }
